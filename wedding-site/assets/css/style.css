@@ -1,0 +1,719 @@
+/* ==========================================================================
+   IAN & KLARISSE WEDDING WEBSITE
+   Custom Stylesheet (works alongside Bootstrap 5)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ROOT VARIABLES / COLOR PALETTE
+-------------------------------------------------------------------------- */
+:root {
+  --color-primary: #6D712E;   /* olive green - headings, accents */
+  --color-secondary: #EEE1C6; /* cream - section backgrounds */
+  --color-black: #111111;
+  --color-white: #FFFFFF;
+  --color-accent: #F2F2F2;
+
+  --font-display: 'Gilda Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL / BASE STYLES
+-------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Reusable section title + divider */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.title-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin-top: 12px;
+}
+
+.story-text {
+  color: var(--color-black);
+  font-size: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. HERO SECTION
+-------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../images/viber_image_2026-06-10_09-18-15-036.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(109, 113, 46, .53) 0%, rgba(109, 113, 46, .53) 50%, rgba(109, 113, 46, .53) 100%);
+}
+
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.monogram img{
+  width: 165px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 100px;
+  color: var(--color-secondary);
+  margin-top: 20px;
+  line-height: 110px;
+  /* letter-spacing: 1px; */
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 25px;
+  color: var(--color-secondary);
+}
+
+.hero-subtitle strong {
+  font-weight: 600;
+}
+
+.hero-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+}
+
+.hero-divider .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   4. COUNTDOWN SECTION
+-------------------------------------------------------------------------- */
+.countdown-section {
+  background-color: var(--color-white);
+}
+
+.countdown-number {
+  font-family: var(--font-body);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-top: 0.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. OUR STORY SECTION
+-------------------------------------------------------------------------- */
+.story-section {
+  background-color: #FFF8E8;
+}
+
+.section-title{
+  font-size: 60px;
+}
+
+.story-photo-frame-started img {
+  border-radius: 50px 50px 50px 0px;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.story-photo-frame-proposal img {
+  border-radius: 50px 0px 50px 50px;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.story-subtitle {
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.story-text{
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+/* --------------------------------------------------------------------------
+   6. SNEAK PEEK GALLERY SECTION
+-------------------------------------------------------------------------- */
+.sneak-peek-section {
+  background-color: var(--color-white);
+}
+
+.sneak-peek-section .section-title {
+  font-size: 50px;
+  padding: 0 0 0 150px;
+}
+
+.image-gallery{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0 100px 0;
+}
+/* @media (max-width: 1024px){
+  .image-gallery{
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+  }
+}
+@media (max-width: 768px){
+  .image-gallery{
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+  }
+} */
+.image-gallery img {
+    flex-grow:1;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.image-gallery img:hover {
+  opacity: 0.85;
+}
+
+.image-gallery img:last-child {
+  margin-right: 0;
+}
+
+.gallery-row {
+  display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.gallery-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+}
+
+.lightbox-close {
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.lightbox-prev {
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 32rem) {
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. WHEN & WHERE SECTION
+-------------------------------------------------------------------------- */
+.when-where-section {
+  background: linear-gradient(90deg, #E3E79E 0%, var(--color-primary) 100%);
+  padding: 30px 0 100px;
+}
+
+.when-where-section h2{
+  color: var(--color-secondary);
+}
+.polaroid-card {
+  background-color: var(--color-secondary);
+  border-radius: 30px;
+  padding: 14px 14px 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 100%;
+}
+
+.polaroid-photo {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.polaroid-photo img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.polaroid-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  padding: 10px 0;
+}
+
+.polaroid-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+/* --------------------------------------------------------------------------
+   8. WEDDING VIBE / PALETTE SECTION
+-------------------------------------------------------------------------- */
+.vibe-section {
+  background-color: var(--color-white);
+}
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 110px);
+}
+
+.swatch {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .swatch-grid {
+    grid-template-rows: repeat(2, 70px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. FOR OUR GUESTS SECTION
+-------------------------------------------------------------------------- */
+.guests-section {
+  background-color: #FFF8E8;
+}
+
+.guest-card {
+  position: relative;
+  padding: 20px;
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.guest-card-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.guest-card-overlay {
+  padding: 1.25rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.guest-card-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.guest-card-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   10. ENTOURAGE SECTION
+-------------------------------------------------------------------------- */
+.entourage-section {
+  background-color: var(--color-white);
+}
+
+.entourage-section-content h2{
+  padding: 0 0 0 150px;
+}
+
+.entourage-heading {
+  font-family: var(--font-script);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.entourage-list li {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 2;
+}
+
+.btn-outline-save {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 0.75rem 1.75rem;
+  background-color: transparent;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-outline-save:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   11. GIFT GIVING SECTION
+-------------------------------------------------------------------------- */
+.gift-section {
+  background: linear-gradient(115deg, #FFF7E7 50%, var(--color-primary) 100%);
+  padding: 150px;
+}
+
+.gift-section p{
+  color: #111111;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.gift-photo-frame {
+  border-radius: 30px;
+  overflow: hidden;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); */
+}
+
+.gift-photo-frame img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   12. FAQ SECTION
+-------------------------------------------------------------------------- */
+.faq-section {
+  background-color: var(--color-white);
+}
+
+.faq-list {
+  max-width: 1000px;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-question {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: .5rem;
+}
+
+.faq-answer {
+  color: #3a3a3a;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   12.5 RSVP FORM SECTION
+-------------------------------------------------------------------------- */
+
+.any-questions-section {
+  background: linear-gradient(90deg, #E3E79E 0%, var(--color-primary) 100%);
+  padding: 100px 0px;
+}
+
+.any-questions-section h2{
+  color: var(--color-secondary);
+}
+
+.any-questions-section p{
+  color: var(--color-accent);
+}
+
+.any-questions-frame{
+  padding: 0 30px;
+}
+
+.any-questions-frame img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. RSVP FORM SECTION
+-------------------------------------------------------------------------- */
+.rsvp-section {
+  background-color: #FFF8E8;
+}
+
+.see-you-there {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+}
+
+.rsvp-form-card {
+  background-color: var(--color-white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 590px;
+}
+
+/* .rsvp-form-card .form-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-black);
+}
+
+.rsvp-form-card .form-control,
+.rsvp-form-card .form-select {
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.65rem 0.85rem;
+}
+
+.rsvp-form-card .form-control:focus,
+.rsvp-form-card .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(109, 113, 46, 0.15);
+}
+
+.btn-rsvp-submit {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.25s ease;
+}
+
+.btn-rsvp-submit:hover {
+  background-color: #565a24;
+  color: var(--color-white);
+}
+
+#rsvpSuccessMsg {
+  color: var(--color-primary);
+  font-weight: 500;
+} */
+
+/* --------------------------------------------------------------------------
+   14. FOOTER SECTION
+-------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-primary);
+}
+
+.footer-link {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-white);
+  transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: var(--color-secondary);
+}
+
+.footer-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.footer-monogram img{
+  width: 120px;
+}
+
+.footer-monogram span {
+  font-family: var(--font-script);
+  font-size: 1.2rem;
+  color: var(--color-white);
+}
+
+/* --------------------------------------------------------------------------
+   15. RESPONSIVE ADJUSTMENTS
+-------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .story-photo-frame img,
+  .gift-photo-frame img {
+    height: 320px;
+  }
+
+  .text-lg-end {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .entourage-heading {
+    font-size: 2rem;
+  }
+}
